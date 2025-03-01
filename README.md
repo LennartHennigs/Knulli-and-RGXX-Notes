@@ -31,7 +31,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
   - [Nintendo DS](#nintendo-ds)
   - [Nintendo 64](#nintendo-64)
   - [MS-DOS](#ms-dos)
-  - [Playstation & Playstation Portable](#playstation--playstation-portable-ppspp)
+  - [Playstation Portable](#playstation-portable-ppsspp)
   - [MAME](#mame)
 - [Configuring Ports](#configuring-ports--portmaster)
 
@@ -45,7 +45,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
   - [ScummVM Engine](#scummvm)
   - [Quake 1](#quake-1---tyrquake)
   - [Quake 2](#quake-2---tyrquake)
-  - [Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment](#baldurs-gate-1--2-icewind-dale-1--2-planescape-torment---gemrb)
+  - [Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment](#baldurs-gate-icewind-dale-planescape-torment---gemrb)
   - [Halflife & Opposing Force & Blueshift](#half-life---xash3d_fwgs)
 - [Tools](#tools)
 - [Bluetooth](#bluetooth)
@@ -71,9 +71,9 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 - Some Emulators need BIOS files to run.
 - Check for missing/needed BIOS files via: \
-`Main Menu > Game Settings > Missing Bios Check`. \
+`Main Menu > Game Settings > Missing Bios Check`.
 - Or select `All` to see all possibly needed ROM files.
-- Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
+- (Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.)
 - Find them online...
 - ...and copy them into your SD card's `bios/` folder.
 - To check if they are correct: \
@@ -131,6 +131,8 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 #### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
+- In games `A`and `B` are often switched.
+
 | Button | Function |
 |-|-|
 | `F + START` | Exit Game |
@@ -147,7 +149,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 #### Quick Load / Save
 
-- In most emulators, pressing `F + Y` or `F + X` will save or load a game's state-
+- In most emulators, pressing `F + Y` or `F + X` will save or load a game's state.
 - There is a list of slots you can save games, too. You select the slot via `F + UP / DOWN`.
 - But you can also load a saved state when you are in the game list.
 - In the game list, press `X` to show the saved state list.
@@ -157,22 +159,21 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 Follow these steps to set up Knulli on your device. I arranged the steps in a helpful order, so it is best to follow them along.
 
-- I recommend using two SD cards – one for Knulli and one for the ROMs and your Knulli settings.
-  - This has the advantage of updating Knulli without messing up your settings or games.
-  - The left slot will contain the Knulli card, and the right will contain the ROMs.
-  - Use at least a 32GB card for Knulli.
+- I recommend using two SD cards – one for Knulli and one for the ROMs and your Knulli settings. This has the advantage of updating Knulli without messing up your settings or games.
+- The left slot will contain the Knulli card, and the right will contain the game ROMs.
+- Use at least a 32GB card for Knulli.
 
 ### Installing Knulli on your device
 
-- Download Knulli for your device from the [releases page](https://github.com/knulli-cfw/distribution/releases)
+- Download Knulli for your device from the [releases page](https://github.com/knulli-cfw/distribution/releases).
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
 - Put the SD card in the device (left slot).
 - Turn on the device (`Long-press on Power Button`).
-- *The device will now update the file structure on the SD card*.
+- The device will now update the file structure on the SD card.
 
 ### Preparing the ROM SD card
 
-- You need to format your second SD card with the Linux ex4 file format (to be able to run certain ports).
+- You need to format your second SD card (for the game ROMS) with the Linux **ext4** file format [to be able to run certain ports](https://knulli.org/guides/portmaster-and-exfat/#stick-with-ext4).
 - Put the SD card in the right slot.
 - Select the new card: `System Settings > Storage Device`.
 
@@ -185,7 +186,11 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 - `Main Menu > System Settings > Frontend Developer Options > Enable web API access`.
 - Now, you can find your device in your network.
 - IP Address: `Main Menu > Network Settings`.
-- You can now also download themes and enable scraping and other tools that need an Internet connection.
+- **Note**: You can also define [multiple known WiFis](#setup-multiple-wifis).
+
+#### WiFi Good!
+
+- Now, you are able to download themes and enable scraping and other tools that need an Internet connection.
 - In addition, you can now find your device on your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: \
  `http://[ip address]:1234`.
@@ -244,13 +249,13 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 ### Setup multiple WiFis
 
 - Open and edit the file `share/system/batocera.conf`.
-- Search for: 
+- Search for:
 
 ``` sh
 # ------------ B - Network ------------ #
 ```
 
-- There you can define multiple wifis, like this: \
+- There you can define multiple wifis, like this:
 
 ``` sh
 ## Wi-Fi SSID (string)
@@ -353,11 +358,53 @@ You can also pair keyboards and mice as described above.
 ### Removing Apple's Dot Files
 
 - On a Mac, you can run `dot_clean /Volumes/SHARE`.
-- I also suggest to create a [.dot_clean](#dot_clean) script in your `ports` folder.
+- I also suggest to create a [dotclean](#dotclean) script in your `ports` folder.
 
 ## Setup and Optimizing Emulators
 
 This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* are being set up).
+
+### Playstation Portable (WiP) - PPSSPP
+
+#### Loading Cheats
+
+- Cheats will not only allow you to "cheat" in the game (duh). 
+- There are also patches that allow you to increase the game's performance (fixed FPS cheats).
+- Download the PPSSPP cheats pack \
+`Menu > Updates & Downloads > Content Downloader > Playstation Portable > Cheats for PPSSPP emulator` 
+- Enable Cheats per default \
+`Game Settings > Per System Configuration > PlayStation Portable > Game Cheats: ON`
+
+#### Use Cheats in Game
+
+*TBD*
+
+#### Increasing Performance *(WiP)*
+
+- The RGXX devices can be a little overwhelmed by high-end Playstation and PSP games. Here are setting that will get the games running more smoothly.
+- Use the `PPSSPPP`emulator, as it offers all performance options and allows you to enable cheats.
+- Press `F`to open the internal settings
+
+- `Quick Menu > Core Options > Hacks`
+  - `(Skip Buffer Effects = ON)`
+  - `Skip GPU Readback = ON`
+  - `Lazy Texture Caching = ON`
+  - `Spline Bezier Quality = LOW`
+  - `Lower resolution for effects: Balanced` (may cause bugs) OR `Safe` (less likely to cause bugs)
+
+- `Quick Menu > Core Options > Video`
+  - `Rendering Resolution = 1x`
+  - `Frameskip = 1`
+  - `Frameskip Type = Number of Frames`
+  - `Auto Frameskip = ON`
+  - `Hardware Transform = ON`
+  - `(Software Skinning = ON)`
+  - `Texture Upscale Type  = xBRZ`
+  - `Texture Deposterize = ON`
+  - `Anisometric Filtering OFF`
+  - `Texture Filtering Auto`
+
+- `Skip Buffer Effects` could result that the game is not rendered.
 
 ### Amstrad
 
@@ -396,8 +443,8 @@ This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* ar
 - To switch the `A` and `B` buttons, edit the `system\configs\mupen64\input.xml` file:
 
 ``` xml
-  <input name="b"        	     value="C Button R" />
-  <input name="a"        	     value="A Button" />
+  <input name="b" value="C Button R" />
+  <input name="a"  value="A Button" />
 ```
 
 ### MS-DOS
@@ -426,7 +473,7 @@ On the top left of the overlay keyboard, there is an option to map keys manually
 - [DOSBox Pure](https://github.com/schellingb/dosbox-pure)
 - [`dosbox.conf` Settings](https://www.dosbox.com/wiki/Dosbox.conf)
 
-### Playstation & Playstation Portable (PPSPP)
+### Playstation Portable (PPSSPP)
 
 ### MAME
 
@@ -475,7 +522,7 @@ TBD
 - *Portmaster* is a program that that allows you to install and manage “game ports”—that is, Linux-native versions or open-source re-implementations of classic and modern games.
 - Often you need to copy the original game files into the folder of installed ports.
 
-- **Note**: If your ROM SD card is not `ext4` formatted, some ports will not run.
+- **Note**: If your ROM SD card is not `ext4` formatted, [some ports might not run](https://knulli.org/guides/portmaster-and-exfat/#stick-with-ext4).
 - **Note**: Always start by reading the `_info.txt` file in the emulator's folder.
 
 Here are some popular ports that run on the RGXX device (see how-tos below):
@@ -507,18 +554,18 @@ Here are some popular ports that run on the RGXX device (see how-tos below):
 #### Copy files to your handheld / SD card
 
 - Copy the content of the bottom-most directory to your SD card to this folder: \
-  `<SD Card>/Ports/stardewvalley/gamedata/`
+  `share/roms/ports/stardewvalley/gamedata/`
 - Done! Now, Stardew Valley should run fine.
 
 (And yes, it takes about 30 seconds for it to start. Don't worry.)
 
-**Note**: If you want to update your Stardew Valley to a new version, follow all steps and re-install Stardew Valley via Portmaster on your device.
-**Note**: You can also copy [savegames](https://stardewvalleywiki.com/Saves) from your computer onto your handheld and vice versa.
-**Note**: I recommend scaling the _ÙI_ and the _Zoom level_ a bit – I use 110% (set it in the Stardew Valley Options).
+**Note**: If you want to update your Stardew Valley to a new version, follow all steps and re-install Stardew Valley via Portmaster on your device. \
+**Note**: You can also copy [savegames](https://stardewvalleywiki.com/Saves) from your computer onto your handheld and vice versa. \
+**Note**: I recommend scaling the _UI_ and the _Zoom level_ a bit – I use 110% (set it in the Stardew Valley Options).
 
 ### Balatro
 
- TBD
+Works as described [here](https://portmaster.games/detail.html?name=balatro). Install via Portmaster and copy a single file.
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
 
@@ -656,18 +703,28 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
 
 #### ScummVM Resolution Settings
   
-- Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
-  - Go to `Game Settings > Per System Advanced Settings > ScummVM`
-  - `Scale Factor: 3x`
-  - `Scaler Mode: ADVMAME`
-      `Stretch Mode: Fit Resolution Scale`
-  
+- Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this. Go to `Game Settings > Per System Advanced Settings > ScummVM`
+  ```
+  Scale Factor: 3x
+  Scaler Mode: ADVMAME
+  Stretch Mode: Fit Resolution Scale
+  ```
+
 - For more details, see [ScummVM: Understanding the Graphics  Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
+
+#### Better defaults
+
+- Edit the `share/system/scummvm/scummvm.ini` file.
+  ``` 
+  kbdmouse_speed=3
+  subtitles=true
+  gui_scale=150
+  ```
 
 | Button | Function |
 |-|-|
 | `LEFT D-PAD` | Mouse |
-| `START` | Main Menu |
+| `START` | Keyboard |
 | `SELECT` | Main Menu |
 | `A` | OK / Select |
 | `X` | Skip |
@@ -686,13 +743,28 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
 
 *TBD*
 
-### Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment - GemRB
+### Baldur's Gate, Icewind Dale, Planescape: Torment - GemRB
+
+- Install [GebRB](https://portmaster.games/detail.html?name=gemrb) via Portmaster.
+- Create folders for your games: `ports/gemrb/games/[ID]`.
+
+  | Game | ID |
+  |-|-|
+  | Baldurs Gate | BG1 |
+  | Baldurs Gate 2 | BG2 |
+  | Icewind Dale | IWD1 |
+  | Icewind Dale 2 | IWD2 |
+  | Plancescape: Tornment | PST |
+
+- **Note**: Portmaster will install a `GemRB.sh` file but it will not work propery. It will always wait (silently) for a keypress and then launch *Baldur's Gate*.
+- Instead, copy [these *scripts*](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/tree/main/ports) into your ports folder. Use them to run your game,
 
 ### Half-Life - xash3d_fwgs
 
 - Create a folder `Half-Life`.
-- Copy the contents of `Half-Life/valve` in there
-- Create a folder called `Half-Life.game`. Keep in empty
+- Copy the contents of `Half-Life/valve` in there.
+- Create a folder called `Half-Life.game`. Keep in empty.
+- For *Opposing Force* copy `Half-Life/gearbox`, for *Blue Shift* the `Half-Life/blueshift`folder.
 
 | Button | Function |
 |-|-|
@@ -724,10 +796,10 @@ It is pre-installed on the device and can be found in the *Port* section.
 
 - Link: [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
-### .dot_clean
+### dotclean
 
 - Let's add a simple script that deletes all Mac dot_files.
-- Create a file called `.dot_clean.sh` in `roms/ports/` with the following content:
+- Create a file called `dotclean.sh` in `roms/tools/` with the following content:
 
 ``` sh
 #!/bin/bash
