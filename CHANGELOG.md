@@ -9,7 +9,7 @@
 
 ## 02-25-2025
 
-- added scripts for all GemRB games (Baldur's Gate, ...)
+- added [scripts](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/tree/main/ports) for all GemRB games (Baldur's Gate, ...)
 - added section on how to define [multiple known WiFis](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#setup-multiple-wifis)
 - added how to [hide the on-screen help](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#hide-ui-help)
 - clarified key mapping sections
