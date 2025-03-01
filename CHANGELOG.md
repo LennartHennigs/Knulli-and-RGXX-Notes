@@ -1,10 +1,17 @@
 # CHANGELOG
 
+## 02-27-2025
+
+- added more settings to improve [ScummVM](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#scummvm)
+- updated [dotclean.sh](https://github.com/LennartHennigs/RG35XX-H-Notes#dotclean)
+- added explanation for [Baldur's Gate (GemRB)](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#baldurs-gate-icewind-dale-planescape-torment---gemrb) and the scripts
+- started with [Playstation Portable (PPSSPP)](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#playstation-portable-ppsspp) optimization settings
+
 ## 02-25-2025
 
 - added scripts for all GemRB games (Baldur's Gate, ...)
-- added section on how to define multiple known wifis
-- added how to hide the on-screen help
+- added section on how to define [multiple known WiFis](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#setup-multiple-wifis)
+- added how to [hide the on-screen help](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#hide-ui-help)
 - clarified key mapping sections
 - clarified ports section
 - fixed some small incorrectness and typos
@@ -13,7 +20,7 @@
 ## 02-24-2025
 
 - Added [BG1.sh](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/blob/main/BG1.sh), a script that allows you to launch all the GemRB games
-- Updated the custom key definition section.
+- Updated the [custom key definition](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#mapping-keys-to-pad-buttons-for-a-single-game) section.
 
 ## 02-22-2025
 
@@ -46,7 +53,7 @@
 
 - Added [Fallout 1](https://github.com/LennartHennigs/RG35XX-H-Notes#fallout1-ce---fallout-1) installation and keyboard setup instructions
 - Added [Nintendo DS in-game Controls](https://github.com/LennartHennigs/RG35XX-H-Notes#in-game-nintendo-ds)
-- Added [.dot_clean](https://github.com/LennartHennigs/RG35XX-H-Notes#dot_clean) script
+- Added [#dotclean](https://github.com/LennartHennigs/RG35XX-H-Notes#dotclean) script
 - Added ToC to README
 
 ## 05-23-2024
