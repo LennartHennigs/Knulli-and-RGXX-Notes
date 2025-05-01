@@ -1,7 +1,7 @@
 
 # Knulli on Anbernic RG-XX Devices
 
-This is a living document that describes what I learned about setting up and running Knulli on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
+This is a living document that describes what I learned about setting up and running [Knulli](https://knulli.org/) on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
 
 This file will most likely contain errors and vague information. \
 You might not like how I describe things. I am sorry. \
@@ -53,7 +53,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 ## Introduction
 
-- Knulli is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
+- [Knulli](https://knulli.org/) is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
 - It is a fork of the Batocera firmware.
 - There is now a port for the Anbernic.
 - It provides a better experience than the stock firmware.
