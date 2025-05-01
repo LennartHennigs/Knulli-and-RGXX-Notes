@@ -300,7 +300,7 @@ To connect a bluetooth device, follow these steps:
 
 You can also pair keyboards and mice as described above.
 
-### Mapping Keys to Pad Buttons For a Single Game
+### Mapping Pad to Keys For a Single Game
 
 - In general, you can define global key settings for a system go to (here Amstrad):
 `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile`
@@ -590,7 +590,7 @@ Works as described [here](https://portmaster.games/detail.html?name=balatro). In
 | `R2` | Toggle Map |
 
 - You cannot edit the `Advanced System Options` key definitions.
-- You can edit the key definitions in the Game: `Settings > Pad mappig`.  There, `A` and `B`, and `X` and `Y` are reversed.
+- You can edit the key definitions in the Game: `Settings > Pad mapping`.  There, `A` and `B`, and `X` and `Y` are reversed.
 - There is also a Playstation version of Diablo. The controls are nicer, but the graphics are more "blocky." It runs a bit less smoothly.
 
 #### Links

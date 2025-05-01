@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 01-05-2025
+
+- renamed *Mapping Keys to Pad Buttons For a Single Game* section to *Mapping Pad to Keys For a Single Game* as suggested in [issue #1](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/issues/1)
+
 ## 02-27-2025
 
 - added more settings to improve [ScummVM](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes#scummvm)
