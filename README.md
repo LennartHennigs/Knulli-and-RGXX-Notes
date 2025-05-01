@@ -262,11 +262,11 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 wifi.ssid=[some id]
 ## Wi-Fi KEY (string)
 ## Escape your special chars (# ; $) with a backslash. eg. $ becomes \$
-wifi.key=[the password]]
+wifi.key=[the password]
 
 ## Secondary Wi-Fi (not configurable via the user interface)
-wifi2.ssid=[some other wifi]]
-wifi2.key=[the password]]
+wifi2.ssid=[some other wifi]
+wifi2.key=[the password]
 ```
 
 - These WifFs are then automatically recognized and connected to.
