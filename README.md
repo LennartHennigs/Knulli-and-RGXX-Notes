@@ -1,7 +1,7 @@
 
 # Knulli on Anbernic RG-XX Devices
 
-This is a living document that describes what I learned setting up and running Knulli on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
+This is a living document that describes what I learned about setting up and running Knulli on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
 
 This file will most likely contain errors and vague information. \
 You might not like how I describe things. I am sorry. \
@@ -13,7 +13,7 @@ And maybe consider [buying me a ☕️](https://ko-fi.com/lennart0815).
 
 Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) for recent changes to this document.
 
-**Note**: This guide is standing on the shoulders of giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on [Reddit](https://www.reddit.com/r/RG35XX_H/).
+**Note**: This guide is standing on the shoulders of giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and others on [Reddit](https://www.reddit.com/r/RG35XX_H/).
 
 ## Table of Contents
 
@@ -131,7 +131,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 #### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
-- In games `A`and `B` are often switched.
+- In games `A`  and `B` are often switched.
 
 | Button | Function |
 |-|-|
@@ -150,7 +150,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 #### Quick Load / Save
 
 - In most emulators, pressing `F + Y` or `F + X` will save or load a game's state.
-- There is a list of slots you can save games, too. You select the slot via `F + UP / DOWN`.
+- There is a list of slots where you can save games, too. You select the slot via `F + UP / DOWN`.
 - But you can also load a saved state when you are in the game list.
 - In the game list, press `X` to show the saved state list.
 - Press `A` to load a state, `Y`to delete one, and `B` to cancel.
@@ -190,13 +190,13 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 #### WiFi Good!
 
-- Now, you are able to download themes and enable scraping and other tools that need an Internet connection.
+- Now, you cam download themes and enable scraping and other tools that need an Internet connection.
 - In addition, you can now find your device on your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: \
  `http://[ip address]:1234`.
 - Username and password are: `root/linux`.
 
-**Note**: The device has problems to connect to 5GHz and guest networks.
+**Note**: The device has problems connecting to 5GHz and guest networks. Consider disabling the 5GHz Wifi.
 
 ### Download Themes
 
@@ -236,7 +236,7 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 - You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
 
-- Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
+- Consider disabling `Enable Navigation Sounds` and `Enable Video Preview Audio`there, too.
 - If you get no sound after you connect the console via HDMI, you need to reset the audio output:
   - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
@@ -311,7 +311,7 @@ You can also pair keyboards and mice as described above.
 
 #### Key File Format
 
-- In general it's easier to use the UI to define keys, as described below,
+- In general, it's easier to use the UI to define keys, as described below,
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
   
 ``` cfg
@@ -336,16 +336,16 @@ You can also pair keyboards and mice as described above.
 - The `.keys` file precedes the `.k2p.cfg` one.
 - You can also manually create a key config file in the folder. Use the name of the ROM/port and append the suffix.
 - You can then add descriptions to the key definitions.  For both examples above, add "Joystick" as a description.
-- In the `.k2p.cfg` files the buttons are `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
+- In the `.k2p.cfg` files, the buttons are `EAST`, `WEST`. In the `.keys`, they are called `A`, `Y`.
 - In the `.key` files, `L1` and `R1` are called `page up` and `page down`.
 - The comments you enter in the key definition files will be displayed in the Key Definition UI.
 
 ## Workflow for Adding Content
 
 - Copy files on the SD card (either from your computer or via WiFi).
-- Remove Apple's dotfiles, if needed (see below).
+- Remove Apple's dotfiles if needed (see below).
 - Eject all mounted partitions.
-- Put card in RG35XX-H.
+- Put the card in RG35XX-H.
 - Power on the device.
 - Run the Scraper \
 `Main Menu > Scraper > Scrape Now`
@@ -362,7 +362,7 @@ You can also pair keyboards and mice as described above.
 
 ## Setup and Optimizing Emulators
 
-This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* are being set up).
+This section explains the "non-trivial" emulators (, how *DOS* or *Daphne* are being set up).
 
 ### Playstation Portable (WiP) - PPSSPP
 
@@ -381,9 +381,9 @@ This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* ar
 
 #### Increasing Performance *(WiP)*
 
-- The RGXX devices can be a little overwhelmed by high-end Playstation and PSP games. Here are setting that will get the games running more smoothly.
+- The RGXX devices can be a little overwhelmed by high-end Playstation and PSP games. Here are settings that will get the games running more smoothly.
 - Use the `PPSSPPP`emulator, as it offers all performance options and allows you to enable cheats.
-- Press `F`to open the internal settings
+- Press `F` to open the internal settings
 
 - `Quick Menu > Core Options > Hacks`
   - `(Skip Buffer Effects = ON)`
@@ -404,7 +404,7 @@ This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* ar
   - `Anisometric Filtering OFF`
   - `Texture Filtering Auto`
 
-- `Skip Buffer Effects` could result that the game is not rendered.
+- `Skip Buffer Effects` could result in the game is not being rendered.
 
 ### Amstrad
 
@@ -413,7 +413,7 @@ This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* ar
 - Therefore, **don't map keyboard navigation** to the joysticks or the D-PAD keys.
 - Bind the virtual keyboard (`F9` for Caprice32) to `the right analog stick click` for all of Amstrad, in case you need other keys. \
   `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Right Stick Press = F9`
-- For a game only assign the keys to select and start a game (e.g., joystick or single-player mode). \
+- For a game only assign the keys to select and start it (e.g., joystick or single-player mode). \
   When a game is selected: `A (long press) > Create/Edit PadToKey Profile`
 - **Note**: Amstrad's *return* key does not equal the `Enter` key. I have not found a way to map this to it.
 
@@ -518,9 +518,9 @@ TBD
 
 ## Configuring Ports & Portmaster
 
-- In addition to preinstalled ports there is *Portmaster* preinstalled on Knulli.
-- *Portmaster* is a program that that allows you to install and manage “game ports”—that is, Linux-native versions or open-source re-implementations of classic and modern games.
-- Often you need to copy the original game files into the folder of installed ports.
+- In addition to the pre-installed ports there is *Portmaster* nstalled on Knulli.
+- *Portmaster* is a program that allows you to install and manage “game ports”—that is, Linux-native versions or open-source re-implementations of classic and modern games.
+- Often, you need to copy the original game files into the installed ports folder.
 
 - **Note**: If your ROM SD card is not `ext4` formatted, [some ports might not run](https://knulli.org/guides/portmaster-and-exfat/#stick-with-ext4).
 - **Note**: Always start by reading the `_info.txt` file in the emulator's folder.
@@ -532,7 +532,7 @@ Here are some popular ports that run on the RGXX device (see how-tos below):
 #### Prerequisites
 
 - You bought Stardew Valley on Steam.
-- you installed the Stardew Valley port via Portmaster on your handheld.
+- You installed the Stardew Valley port via Portmaster on your handheld.
 
 #### Select the right game sources from Steam
 
@@ -599,7 +599,7 @@ Works as described [here](https://portmaster.games/detail.html?name=balatro). In
 
 ### Duke Nukem 3D - eDuke32
 
-- Create folder called `duke` in `roms/eduke32/` and copy `DUKE3D.GRP` into it.
+- Create a folder called `duke` in `roms/eduke32/` and copy `DUKE3D.GRP` into it.
 - Create file `Duke_Nukem_3D.eduke32` in `roms/eduke32/`.
 - Add line `FILE = /duke/DUKE3D.GRP` to it.
 
@@ -695,10 +695,10 @@ Works as described [here](https://portmaster.games/detail.html?name=balatro). In
 
 - [ScummVM](https://www.scummvm.org/) is an emulator for point-and-click adventures.
 - Store games in the `roms/scummvm/` folder.
-- Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `tentacle` for **Day of the Tentacle**.
+- Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g., use `tentacle` for **Day of the Tentacle**.
 - Create a folder for each game and copy files into it.
 - Inside the folder, create a file called `[id].scummvm` for each game you want to add. To be sure, also write and put the ID into the file.
-- **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
+- **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`.
 The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games) shows the required files for a game.
 
 #### ScummVM Resolution Settings
@@ -756,7 +756,7 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
   | Icewind Dale 2 | IWD2 |
   | Plancescape: Tornment | PST |
 
-- **Note**: Portmaster will install a `GemRB.sh` file but it will not work propery. It will always wait (silently) for a keypress and then launch *Baldur's Gate*.
+- **Note**: Portmaster will install a `GemRB.sh` file, but it will not work properly. It will always wait (silently) for a keypress and then launch *Baldur's Gate*.
 - Instead, copy [these *scripts*](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/tree/main/ports) into your ports folder. Use them to run your game,
 
 ### Half-Life - xash3d_fwgs
@@ -771,7 +771,7 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
 | `B` | OK / Select |
 | `A` | Cancel / Back |
 
-- You can view and change the controls in the game: `Configuration > Controls`.  In there `A` and `B`, and `X`and `Y`are reversed.
+- You can view and change the controls in the game: `Configuration > Controls`.  In there, `A` and `B`, and `X`and `Y`are reversed.
 
 #### Links
 
@@ -819,7 +819,7 @@ find /userdata/ -name "._*" -exec rm {} \;
 
 - **CFW (Custom Firmware)** is modified firmware that enhances a device's capabilities and features beyond those the original manufacturer provides. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
 
-- **EmulationStation** is a graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works with Batocera Linux to offer a streamlined gaming experience.
+- **EmulationStation** is a graphical frontend for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works with Batocera Linux to offer a streamlined gaming experience.
 
 - **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It is the backbone for many emulation projects and integrates with EmulationStation, allowing it to run various emulators through a standardized interface.
 
