@@ -1,3 +1,6 @@
 .vscode
 .markdownlint.json
 to add.md
+
+.DS_Store
+Thumbs.db
