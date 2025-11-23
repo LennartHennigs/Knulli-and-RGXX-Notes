@@ -17,39 +17,87 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Some Basics](#some-basics)
-  - [The SD Card](#the-sd-card)
-  - [BIOS Files](#bios-files)
-  - [ROM Files](#rom-files)
-  - [Controls](#controls)
-- [Setting Up The Device](#setting-up-the-device)
-- [Additional Settings & Tipps](#additional-settings--tipps)
-- [Workflow for Adding Content](#workflow-for-adding-content)
-- [Setup and Optimize Emulators](#setup-and-optimizing-emulators)
-  - [Amstrad CPC](#amstrad)
-  - [Nintendo DS](#nintendo-ds)
-  - [Nintendo 64](#nintendo-64)
-  - [MS-DOS](#ms-dos)
-  - [Playstation Portable](#playstation-portable-ppsspp)
-  - [MAME](#mame)
-- [Configuring Ports](#configuring-ports--portmaster)
-
-  - [Stardew Valley](#stardew-valley)
-  - [Balatro](#balatro)
-  - [Diablo 1 & Hellfire](#diablo-1--diablo-hellfire---devilutionx)
-  - [Duke Nukem 3D](#duke-nukem-3d---eduke32)
-  - [Fallout](#fallout-1---fallout1-ce)
-  - [Fallout 2](#fallout-2---fallout2-ce)
-  - [Doom 1 & Doom 2](#doom-1--doom-2---prboom)
-  - [ScummVM Engine](#scummvm)
-  - [Quake 1](#quake-1---tyrquake)
-  - [Quake 2](#quake-2---tyrquake)
-  - [Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment](#baldurs-gate-icewind-dale-planescape-torment---gemrb)
-  - [Halflife & Opposing Force & Blueshift](#half-life---xash3d_fwgs)
-- [Tools](#tools)
-- [Bluetooth](#bluetooth)
-- [Some Terms / What is](#some-terms--what-is)
+- [Knulli on Anbernic RG-XX Devices](#knulli-on-anbernic-rg-xx-devices)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Some Basics](#some-basics)
+    - [The SD Card](#the-sd-card)
+    - [BIOS Files](#bios-files)
+    - [ROM Files](#rom-files)
+    - [Controls](#controls)
+      - [General Navigation](#general-navigation)
+      - [Main Menu](#main-menu)
+      - [Game List](#game-list)
+      - [In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)](#in-game-gb-gba-gb-color-nes-snes-sega-psx)
+      - [Quick Load / Save](#quick-load--save)
+  - [Setting Up The Device](#setting-up-the-device)
+    - [Installing Knulli on your device](#installing-knulli-on-your-device)
+    - [Preparing the ROM SD card](#preparing-the-rom-sd-card)
+    - [Setting up WiFi](#setting-up-wifi)
+      - [WiFi Good!](#wifi-good)
+    - [Download Themes](#download-themes)
+    - [Enable Scraping](#enable-scraping)
+    - [Enable Retro Achievements](#enable-retro-achievements)
+    - [Update the ROM List on Each Boot](#update-the-rom-list-on-each-boot)
+  - [Additional Settings \& Tipps](#additional-settings--tipps)
+    - [Hide UI Help](#hide-ui-help)
+    - [Overclock](#overclock)
+    - [Audio Settings](#audio-settings)
+    - [Enable / Disable Analog Stick LEDs](#enable--disable-analog-stick-leds)
+    - [Setup multiple WiFis](#setup-multiple-wifis)
+    - [Bluetooth](#bluetooth)
+      - [Connecting a Bluetooth Controller](#connecting-a-bluetooth-controller)
+      - [Using Bluetooth Audio](#using-bluetooth-audio)
+      - [Connecting other Bluetooth Devices](#connecting-other-bluetooth-devices)
+    - [Mapping Pad to Keys For a Single Game](#mapping-pad-to-keys-for-a-single-game)
+      - [Key File Format](#key-file-format)
+  - [Workflow for Adding Content](#workflow-for-adding-content)
+    - [Removing Apple's Dot Files](#removing-apples-dot-files)
+  - [Setup and Optimizing Emulators](#setup-and-optimizing-emulators)
+    - [Playstation Portable (WiP) - PPSSPP](#playstation-portable-wip---ppsspp)
+      - [Loading Cheats](#loading-cheats)
+      - [Use Cheats in Game](#use-cheats-in-game)
+      - [Increasing Performance *(WiP)*](#increasing-performance-wip)
+    - [Amstrad](#amstrad)
+    - [Nintendo DS](#nintendo-ds)
+    - [Nintendo 64](#nintendo-64)
+    - [MS-DOS](#ms-dos)
+      - [Configuring Cycles](#configuring-cycles)
+      - ["Package File is Corrupt" error](#package-file-is-corrupt-error)
+      - [Links](#links)
+    - [Playstation Portable (PPSSPP)](#playstation-portable-ppsspp)
+    - [MAME](#mame)
+  - [Setting up and Running Ports](#setting-up-and-running-ports)
+    - [Port Folders](#port-folders)
+  - [Configuring Ports \& Portmaster](#configuring-ports--portmaster)
+    - [Stardew Valley](#stardew-valley)
+      - [Prerequisites](#prerequisites)
+      - [Select the right game sources from Steam](#select-the-right-game-sources-from-steam)
+      - [Download the game sources](#download-the-game-sources)
+      - [Copy files to your handheld / SD card](#copy-files-to-your-handheld--sd-card)
+    - [Balatro](#balatro)
+    - [Diablo 1 \& Diablo Hellfire - Devilutionx](#diablo-1--diablo-hellfire---devilutionx)
+      - [Links](#links-1)
+    - [Duke Nukem 3D - eDuke32](#duke-nukem-3d---eduke32)
+      - [Links](#links-2)
+    - [Fallout 1 - fallout1-ce](#fallout-1---fallout1-ce)
+      - [Links](#links-3)
+    - [Fallout 2 - fallout2-ce](#fallout-2---fallout2-ce)
+    - [Doom 1 \& Doom 2 - PRBOOM](#doom-1--doom-2---prboom)
+    - [ScummVM](#scummvm)
+      - [ScummVM Resolution Settings](#scummvm-resolution-settings)
+      - [Better defaults](#better-defaults)
+      - [Links](#links-4)
+    - [Quake 1 - tyrquake](#quake-1---tyrquake)
+    - [Quake 2 - tyrquake](#quake-2---tyrquake)
+    - [Baldur's Gate, Icewind Dale, Planescape: Torment - GemRB](#baldurs-gate-icewind-dale-planescape-torment---gemrb)
+    - [Half-Life - xash3d\_fwgs](#half-life---xash3d_fwgs)
+      - [Links](#links-5)
+  - [Tools](#tools)
+    - [OD Commander](#od-commander)
+    - [dotclean](#dotclean)
+  - [Setting up SyncThing](#setting-up-syncthing)
+  - [Some Terms / What is...](#some-terms--what-is)
 
 ## Introduction
 
@@ -456,16 +504,38 @@ This section explains the "non-trivial" emulators (, how *DOS* or *Daphne* are b
 - If there is a `dosbox.bat` file in the game folder, it will be executed.
 - If you start the game without a `dosbox.bat` file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
 - After selecting an executable, it will be run, and a file called `AUTOBOOT.DBP` will be created.
-- A keyboard overlay will be shown if you press `L3`.
+- A keyboard overlay will be shown if you press `R3`.
+- Press the left and right shoulder keys to toggle between the keyboard layout and other settings. Use the start menu to define the default executable.
 On the top left of the overlay keyboard, there is an option to map keys manually. However, it is preferable to use the Batocera key mapping.
 
 | Button | Function |
 |-|-|
-| `L3` | Show Keyboard (and Keyboard Mapper button) |
+| `R3` | Show Keyboard (and Keyboard Mapper button) |
 | `LEFT JOYSTICK` | Mouse |
 | `F + UP /DOWN` | Load / Save |
 | `F + RIGHT` | Fast Forward |
 | `Y` | OK |
+
+#### Configuring Cycles
+
+You can also adjust the [cycle speed](https://dosbox-x.com/wiki/Guide%3ACPU-settings-in-DOSBox%E2%80%90X#_cycles) in the `dosbox.bat` file, e.g.:
+
+``` dos
+CONFIG -cycles 5000
+```
+
+Typical values for cycles are:
+
+- 486 (66-100 MHz): `cycles=3000 to 6000`
+- Pentium (90-133 MHz): `cycles=5000 to 10000`
+- Pentium II (233-450 MHz): ` cycles=10000 to 20000
+
+#### "Package File is Corrupt" error
+
+With Dosbox-Pure some games show the above error, e.g. with *PpwerMonger*. 
+Add the `LOADFIX`command to the `dosbox.bat` to fix.
+`LOADFIX` is an internal command that allocates 64k for the program to run.
+
 
 #### Links
 
@@ -812,6 +882,21 @@ find /userdata/ -name "._*" -exec rm {} \;
 - Next, update the Game List: \
 `Main Menu > Games Settings > Update Game List`
 
+## Setting up SyncThing
+
+If you have a NAS or some permanent running computer, I recommend installing and running [Syncthing](https://syncthing.net/) on your device. This service will automatically sync and back up folders.
+Follow these steps:
+- Enable the syncthing service on your device `System Settings > Services` and reboot.
+- Install and run the service it on your NAS
+- Open the webfrontend on either service, e.g `http://192.168.178.60:8384/`
+- Delete the default folder
+- Create a backup folder for your device
+- Set up credentials *TODO*
+- Add your device and give it a name
+- Select the folder and define the folders to be saved.
+  - `userdata/saves/`
+  - `/userdata/bios/`
+  - `/userdata/roms/`
 
 ## Some Terms / What is...
 

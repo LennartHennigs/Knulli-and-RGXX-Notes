@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## 01-05-2025
 
-- renamed *Mapping Keys to Pad Buttons For a Single Game* section to [Mapping Pad to Keys For a Single Game](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/blob/main/README.md#mapping-pad-to-keys-for-a-single-game) as suggested in [issue #1](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/issues/1)
+## 11-23-2025
+
+- added Syncthing descriptions.
+- added more details to Dosbox Pure config and potential errors
 
 ## 02-27-2025
 
@@ -38,6 +40,10 @@
 ## 02-03-2025
 
 - Updated [Amstrad notes](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#amstrad) and keyboard mapping
+
+## 01-05-2025
+
+- renamed *Mapping Keys to Pad Buttons For a Single Game* section to [Mapping Pad to Keys For a Single Game](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/blob/main/README.md#mapping-pad-to-keys-for-a-single-game) as suggested in [issue #1](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/issues/1)
 
 ## 06-08-2024
 
