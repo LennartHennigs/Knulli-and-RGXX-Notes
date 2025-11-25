@@ -530,6 +530,14 @@ Typical values for cycles are:
 - Pentium (90-133 MHz): `cycles=5000 to 10000`
 - Pentium II (233-450 MHz): ` cycles=10000 to 20000
 
+#### Disabling EMS
+
+You can also disable the EMS in a similar war in the `dosbox.bat` file, in case a game gives you an error:
+
+``` dos
+CONFIG -set ems false
+```
+
 #### "Package File is Corrupt" error
 
 With Dosbox-Pure some games show the above error, e.g. with *PpwerMonger*. 
