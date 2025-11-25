@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## 11-25-2025
+
+- described typical problems and solutions with DosBox
+
 ## 11-23-2025
 
 - added Syncthing descriptions.
