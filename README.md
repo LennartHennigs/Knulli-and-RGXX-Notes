@@ -230,6 +230,8 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 ### Setting up WiFi
 
+**Note**: The device can only connect to 2.4GHz WiFis with WPA2. If you habe the same WiFi name for also a 5GHz it will habe problems connecting. Consider disabling the 5GHz Wifi. Or set up a guest WiFi. 
+
 - `Main Menu > Network Settings`.
 - `Main Menu > System Settings > Frontend Developer Options > Enable web API access`.
 - Now, you can find your device in your network.
@@ -238,13 +240,11 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 #### WiFi Good!
 
-- Now, you cam download themes and enable scraping and other tools that need an Internet connection.
+- Now, you can download themes and enable scraping and other tools that need an Internet connection.
 - In addition, you can now find your device on your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: \
  `http://[ip address]:1234`.
 - Username and password are: `root/linux`.
-
-**Note**: The device has problems connecting to 5GHz and guest networks. Consider disabling the 5GHz Wifi.
 
 ### Download Themes
 
